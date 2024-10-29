@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+
+{int n=12;
+    //scanf("%d",&n);
+    int sq=n*n;
+
+int rev=0;
+    printf(" %d %d ",n,sq);
+    while(n>0)
+    {
+    int d=n%10;
+    rev=rev*10+d;
+    n=n/10;
+
+    }
+    printf("%d ",rev);
+    int revsq=rev*rev;
+    printf("%d ",revsq);
+    int revsqrev=0;
+    while(revsq>0)
+    {
+    int d=revsq%10;
+    revsqrev=revsqrev*10+d;
+    revsq=revsq/10;
+    }
+    
+    printf("%d ",revsqrev);
+    
+    if(sq==revsqrev)
+    printf("adam");
+    else
+    printf("not an adam");
+    
+    return 0;
+}
